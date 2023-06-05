@@ -2,8 +2,9 @@ import { Show, createSignal, getOwner, onCleanup, onMount, runWithOwner } from "
 import { registerComponent, renderBranchesElements } from "../builder/StageBuilder"
 
 import { A } from "@solidjs/router"
-import { Alert, Button, Card, CardContent, CircularProgress, Stack, TextField, useTheme } from "@suid/material"
+import { Alert, Button, Card, CardContent, CircularProgress, IconButton, Stack, TextField, useTheme } from "@suid/material"
 import { joinNodePath } from "../builder/Node"
+import { Visibility, VisibilityOff } from "@suid/icons-material"
 
 registerComponent({
   key: "form",
@@ -277,6 +278,7 @@ registerComponent({
     })
 
     const [value, setValue] = createSignal(node.value || "")
+    const [type, setType] = createSignal("password")
     const theme = useTheme()
 
     const helperText = () =>
@@ -300,7 +302,7 @@ registerComponent({
         name={attr?.name || node.key}
         placeholder={attr?.placeholder}
         required={attr?.required}
-        type={attr?.type ?? "password"}
+        type={type()}
         disabled={attr?.disabled || props.root.state.isSending}
         value={value()}
         onChange={(e, value) => {
@@ -311,6 +313,13 @@ registerComponent({
         label={attr?.label}
         error={!!helperText()}
         helperText={helperText()}
+        InputProps={{
+          endAdornment: (
+            <IconButton onClick={() => setType((prev) => (prev === "password" ? "text" : "password"))}>
+              {type() === "password" ? <Visibility /> : <VisibilityOff />}
+            </IconButton>
+          )
+        }}
       />
     )
   }
