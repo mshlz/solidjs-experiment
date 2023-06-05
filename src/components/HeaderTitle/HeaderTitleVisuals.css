@@ -1,0 +1,18 @@
+
+
+.HeaderTitle__img {
+    margin-bottom: 24px;
+    cursor: pointer;
+    width: 24px;
+    height: 20.57px;
+}
+
+.HeaderTitle__title {
+    font-size: 24px;
+    margin-bottom: 0;
+    color: black !important;
+}
+
+.HeaderTitle {
+    margin-bottom: 28px;
+}

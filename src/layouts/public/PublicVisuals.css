@@ -1,0 +1,108 @@
+.PublicDecorator__rowContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.PublicDecorator__col {
+    min-height: 100vh;
+    z-index: 2;
+    width: 37.2vw;
+    border-radius: 0px 16px 16px 0px;
+    min-width: 536px;
+    max-width: 536px;
+}
+
+.PublicDecorator__colWhiteBackground {
+    min-height: 100vh;
+    z-index: 2;
+    width: 37.2vw;
+    border-radius: 0px 16px 16px 0px;
+    min-width: 536px;
+    max-width: 536px;
+    background: white;
+}
+
+.PublicDecorator__colBackground {
+    background: #ee2c6c;
+    height: 100vh;
+    position: absolute;
+    z-index: 1;
+    width: 100vw;
+}
+
+.PublicDecorator__divTemplateContainer {
+    padding-left: 84px;
+    padding-right: 84px;
+    padding-top: 72px;
+    display: flex;
+    height: 100vh;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.PublicDecorator__divChildrenContainer {
+    height: calc(100vh - 70px);
+}
+
+.PublicDecorator__divLogoContainer {
+    text-align: center;
+    height: 32px;
+    margin-bottom: 38px;
+}
+
+.PublicDecorator__img {
+    text-align: center;
+}
+
+.PublicDecorator__imgBackground {
+    width: 1168px;
+    float: right;
+    height: auto;
+    max-height: 100vh;
+    min-height: 100vh;
+    object-fit: cover;
+    object-position: top;
+}
+
+@media screen and (max-width: 768px) {
+    .PublicDecorator__rowContainer {
+        flex-direction: column !important;
+        align-items: center;
+    }
+
+    .PublicDecorator__colWhiteBackground {
+        width: 100vw;
+        border-radius: 16px 16px 0px 0px;
+        margin-top: 127px;
+        min-width: 342px;
+        max-width: initial;
+    }
+
+    .PublicDecorator__divTemplateContainer {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .PublicDecorator__img {
+        display: none;
+    }
+
+    .PublicDecorator__colBackground {
+        width: 100vw;
+        max-width: 100vw;
+        height: 400px;
+    }
+
+    .PublicDecorator__imgBackground {
+        height: 400px;
+        min-height: auto;
+        width: 100%;
+    }
+
+}
+
+@media screen and (min-width: 1680px) {
+    .PublicDecorator__imgBackground {
+        width: 80vw;
+    }
+}

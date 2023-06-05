@@ -1,0 +1,14 @@
+.global__elementFullWidth {
+  width: 100%;
+}
+
+.global__elementFlex {
+  display: flex;
+}
+
+.global__imgIconCenter {
+  margin-right: 9px;
+  width: 16px;
+  height: 16px;
+  margin-bottom: 4px;
+}
